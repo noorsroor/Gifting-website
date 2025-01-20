@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!--Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
+    <!--Box Icons-->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <!-- My CSS file-->
+    <link rel="stylesheet" href="../css pages/shopPage.css">
+</head>
+<body>
+   <!-- Navbar -->
+ <nav class="navbar navbar-expand-lg border-bottom">
+    <div class="container-fluid">
+      <!-- Logo -->
+      <p class="navbar-brand fw-bold">
+        <img src="../imagesHome/logo.png" alt="logo"> <span class="logospan"> <span style="color:#9F8069;">Golden</span>Touch</span>
+      </p>
+      <!-- Toggler for mobile view -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Navbar Items -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="./homeUserPage.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active text-white fw-bold position-relative" id="active-nav" href="#">Shop</a>
+          </li>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="./aboutUsPage.html">Who We Are</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="./contactUsPage.html">Contact Us</a>
+        </li>
+          <li id="userprofile" class="nav-item">
+            <a href="./userPage.html"><i class="fa-solid fa-user"></i></a>
+            <a href="#"><i class="fa-solid fa-heart"></i></a>
+            <a href="cartPage.html"><i class="fa-solid fa-basket-shopping"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav> <!--===========End nav==========-->
+
+
+  <!--page main content-->
+<div class="main-content">
+    <section class="hero"><!-- Hero Section begin -->
+        <div>Find the Perfect Gift for Every Occasion</div>
+        <div>Explore our collection of elegant and thoughtful accessories for everyone on your list. Make your gifts unforgettable with a touch of Golden Touch magic!</div>
+    </section>
+
+    <section class="category">
+        <div class="title">Select Category</div>
+        <div class="select">
+            <button id="women" value="women" class="btn">Women</button>
+            <button id="men" value="men" class="btn">Men</button>
+            <button id="kids" value="kids" class="btn">Kids</button>
+        </div>
+    </section>
+    <div class="line"></div>
+
+    <section>
+        <div id="cards-container" class="cards-grid"></div>
+    </section>
+</div>
+
+  <!--===================Footer==========================-->
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Logo and Name -->
+      <div class="footer-logo">
+        <p class="navbar-brand fw-bold" id="logo-icon">
+        <img src="../imagesHome/logo.png" alt="logo-icon"> <span class="logospan"> <span style="color:#9F8069;">Golden</span>Touch</span>
+        </p>
+      </div>
+      
+      <!-- Navigation Links -->
+      <div class="footer-links">
+        <ul>
+          <li><a href="./homeUserPage.html">Home</a></li>
+          <li class="active"><a href="#">Shop</a></li>
+          <li><a href="#">Sign Up</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      
+      <!-- Social Media -->
+      <div class="footer-social">
+        <span>Find Us on</span>
+        <div class="social-icons">
+          <i class='bx bxl-facebook-square bx-sm'></i>
+          <i class='bx bxl-instagram-alt bx-sm' ></i>
+          <i class='bx bxl-gmail bx-sm' ></i>
+          <i class='bx bxl-whatsapp bx-sm' ></i>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Copyright ©2020 All rights reserved</p>
+    </div>
+  </footer>
+  
+
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-analytics.js";
+    import { getAuth,onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
+    import { getFirestore, query,where, collection, addDoc, getDocs, doc, deleteDoc, updateDoc } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-firestore.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+    apiKey: "AIzaSyCfytV7PtN2LIrv8jBlqsLRGQeGtVe4LqY",
+    authDomain: "golden-f43ab.firebaseapp.com",
+    projectId: "golden-f43ab",
+    storageBucket: "golden-f43ab.firebasestorage.app",
+    messagingSenderId: "314092349099",
+    appId: "1:314092349099:web:9449b624f50ac93c5d39ee",
+    measurementId: "G-PYNZ6QXR40"
+    };
+    /*********************************************************************************************************/
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth =getAuth(app);
+    const db = getFirestore(app);
+    // Initialize Firebase Authentication
+    auth.onAuthStateChanged((user) => {
+        console.log("Auth state changed:", user);
+        if (user) {
+            console.log("User ID:", user.uid);
+            
+        } else {
+            console.log("No user signed in.");
+        }
+    });
+
+    /*********************************************************************************************/
+    const womenBtn = document.getElementById("women");
+    const menBtn = document.getElementById("men");
+    const kidsBtn = document.getElementById("kids");
+
+    async function  fetchAndDisplayProducts(category) {
+    try {
+        const cardsContainer = document.getElementById("cards-container");
+        cardsContainer.innerHTML = ""; 
+
+        let querySnapshot;
+
+    if (category) {
+      // Fetch products for the selected category
+      querySnapshot = await getDocs(query(collection(db, "products"), where("category", "==", category)));
+    } else {
+      // Fetch all products if no category is selected
+      querySnapshot = await getDocs(collection(db, "products"));
+    }
+
+    // Render each product
+    querySnapshot.forEach((productDoc) => {
+      const cardElement = renderCard(productDoc.data() ,productDoc.id);
+      cardsContainer.appendChild(cardElement);
+    });
+    } catch (error) {
+      console.error("Error fetching products:", error);
+    }
+  }
+  //check the user and send data to firebase
+  async function addToCart(productData, userId) {
+  try {
+    if (!userId) {
+      console.error("User not logged in. Cannot add to cart.");
+      return;
+    }
+
+    const cartCollection = collection(db, "cart");
+    await addDoc(cartCollection, {
+      userId: userId,
+      name: productData.name,
+      price: productData.price,
+      description: productData.description,
+      image: productData.image,
+    });
+
+    console.log("Product added to cart successfully!");
+  } catch (error) {
+    console.error("Error adding product to cart:", error);
+  }
+}
+
+function attachAddToCartEvent(button, productData) {
+  button.addEventListener("click", async () => {
+    const user = auth.currentUser; // Get the currently logged-in user
+    if (!user) {
+      alert("You need to log in to add products to the cart!");
+      return;
+    }
+    const userId = user.uid;
+
+    // Call addToCart function with product data and userId
+    await addToCart(productData, userId);
+  });
+}
+
+function attachFavoriteEvent(button) {
+  button.addEventListener("click", () => {
+    const heartIcon = button.querySelector("i");
+    if (heartIcon) {
+      // Toggle between the "empty heart" and "filled heart" icons
+      if (heartIcon.classList.contains("bx-heart")) {
+        heartIcon.classList.remove("bx-heart");
+        heartIcon.classList.add("bxs-heart");
+      } else {
+        heartIcon.classList.remove("bxs-heart");
+        heartIcon.classList.add("bx-heart");
+      }
+    }
+  });
+}
+
+function renderCard(productData, product_ID) {
+  const card = document.createElement("div");
+  card.classList.add("card");
+
+  const imagePlaceholder = document.createElement("div");
+  imagePlaceholder.classList.add("image-placeholder");
+  const img = document.createElement("img");
+  img.src = productData.image;
+  img.alt = productData.name;
+  imagePlaceholder.appendChild(img);
+
+  const cardHead = document.createElement("div");
+  cardHead.classList.add("card-head");
+  const h3 = document.createElement("h3");
+  h3.textContent = productData.name;
+  cardHead.appendChild(h3);
+
+  const starRating = document.createElement("div");
+  starRating.classList.add("star-rating");
+  starRating.textContent = "★★★★☆";
+  cardHead.appendChild(starRating);
+
+  const description = document.createElement("p");
+  description.textContent = productData.description;
+
+  const price = document.createElement("div");
+  price.classList.add("price");
+  price.textContent = `Price: ${productData.price} JD`;
+
+  const cardBtns = document.createElement("div");
+  cardBtns.classList.add("card-btns");
+
+  const addToFav = document.createElement("div");
+  addToFav.classList.add("add-to-fav");
+  const heartIcon = document.createElement("i");
+  heartIcon.classList.add("bx", "bx-heart", "bx-sm");
+  addToFav.appendChild(heartIcon);
+
+  const addToCartBtn = document.createElement("button");
+  addToCartBtn.classList.add("add-to-cart");
+  const addBox = document.createElement("div");
+  addBox.classList.add("add-box");
+  const addText = document.createElement("a");
+  addText.textContent = "Add to Cart";
+  const loader = document.createElement("div");
+  loader.classList.add("loader");
+  const doneIcon = document.createElement("div");
+  doneIcon.classList.add("done");
+  const checkIcon = document.createElement("i");
+  checkIcon.classList.add("bx", "bx-check", "bx-sm");
+  doneIcon.appendChild(checkIcon);
+
+  // Attach a click event to the whole card to navigate to the product page
+  img.addEventListener("click", () => {
+    window.location.href = `./ProductPage.html?id=${product_ID}`;
+  });
+
+  addBox.appendChild(addText);
+  addBox.appendChild(loader);
+  addBox.appendChild(doneIcon);
+  addToCartBtn.appendChild(addBox);
+
+
+  attachFavoriteEvent(addToFav);
+  // Attach add-to-cart event
+  attachAddToCartEvent(addToCartBtn, productData);
+
+  cardBtns.appendChild(addToFav);
+  cardBtns.appendChild(addToCartBtn);
+
+  card.appendChild(imagePlaceholder);
+  card.appendChild(cardHead);
+  card.appendChild(description);
+  card.appendChild(price);
+  card.appendChild(cardBtns);
+
+  return card;
+}
+
+
+  // Call the function on page load
+//   document.addEventListener("DOMContentLoaded", () => {
+//     fetchAndRenderProducts();
+//   });
+
+    womenBtn.addEventListener("click", () => {
+    womenBtn.classList.add("active-btn");
+    menBtn.classList.remove("active-btn");
+    kidsBtn.classList.remove("active-btn");
+    fetchAndDisplayProducts("women"); // Fetch products for "women"
+    });
+
+    menBtn.addEventListener("click", () => {
+    menBtn.classList.add("active-btn");
+    womenBtn.classList.remove("active-btn");
+    kidsBtn.classList.remove("active-btn");
+    fetchAndDisplayProducts("men"); // Fetch products for "men"
+    });
+
+    kidsBtn.addEventListener("click", () => {
+    kidsBtn.classList.add("active-btn");
+    menBtn.classList.remove("active-btn");
+    womenBtn.classList.remove("active-btn");
+    fetchAndDisplayProducts("kids"); // Fetch products for "kids"
+    });
+
+    fetchAndDisplayProducts();
+    </script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js pages/shopPage.js"></script>
+</body>
+</html>

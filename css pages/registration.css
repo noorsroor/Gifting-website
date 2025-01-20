@@ -1,0 +1,199 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #d8cbb3, #9F8069);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    animation: fadeIn 1.2s ease-out; /* Animation for body */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Container */
+.registration-container {
+    background: #fff;
+    padding: 40px 50px;
+    border-radius: 50px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0; /* Start invisible */
+    transform: translateY(30px); /* Slide effect */
+    animation: slideIn 1.2s ease-out forwards; /* Apply slide animation */
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Header */
+.form-header h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #9F8069;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeDown 1s ease-out 0.5s forwards;
+}
+
+.form-header p {
+    margin-bottom: 25px;
+    font-size: 16px;
+    color: #666;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeDown 1s ease-out 0.7s forwards;
+}
+
+@keyframes fadeDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Form */
+.form-group {
+    margin-bottom: 20px;
+    width: 100%;
+    opacity: 0;
+    transform: translateX(-20px); /* Slide from the left */
+    animation: fadeInField 1s ease-out forwards;
+    animation-delay: 1s; /* Delay for sequential appearance */
+}
+
+@keyframes fadeInField {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #555;
+    opacity: 0;
+    animation: fadeInLabel 0.8s ease-out forwards;
+    animation-delay: 1.2s;
+}
+
+@keyframes fadeInLabel {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+input,
+select {
+    width: 100%;
+    padding: 18px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #555;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    opacity: 0;
+    animation: fadeInInput 1s ease-out forwards;
+    animation-delay: 1.4s;
+}
+
+@keyframes fadeInInput {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+input::placeholder {
+    color: #bbb;
+}
+
+/* Buttons */
+button.submit-btn {
+    width: 100%;
+    padding: 18px;
+    background-color: #9F8069;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease;
+    opacity: 0;
+    transform: scale(0.8);
+    animation: fadeInButton 1.2s ease-out forwards;
+    animation-delay: 1.6s;
+}
+
+button.submit-btn:hover {
+    background-color: #7e6754;
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+@keyframes fadeInButton {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .registration-container {
+        padding: 20px 30px;
+    }
+
+    input,
+    select,
+    button.submit-btn {
+        padding: 16px;
+    }
+}

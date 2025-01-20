@@ -1,0 +1,471 @@
+/* Custom Styles for Checkout Page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+/*================================Nav Bar=================================*/
+#userprofile{
+    display: flex;
+  gap: 30px;
+  margin-right: 10px;
+  margin-left: 100px;
+  margin-top: 13px;
+  cursor: pointer;
+  transform: scale(1.1);
+  }
+  #userprofile a {
+    color: black;
+  }
+  #userprofile a:hover {
+    transform: scale(1.3);
+    color: #9F8069;
+  }
+  
+  .logospan{
+    font-family: "Monotype Corsiva", "Cursive", sans-serif;
+    font-size: 35px;
+    margin-bottom: -10px !important;
+  }
+  
+  nav {
+    grid-column: span 12;
+    grid-row: 1;
+    z-index: 10;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .navbar {
+    background-color: White !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3) !important;
+  }
+  
+  .nav-link {
+    color: black !important;
+    margin: 0 10px;
+    font-size: 14px;
+  }
+  
+  
+  .nav-link.active {
+    font-weight: bold;
+    color: White !important;
+    width: auto;
+    height: 35px;
+    border-radius: 12px;
+    text-align: center;
+    background-color: #9F8069;
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.25);
+  }
+  
+  #active-nav:hover{
+    color: black !important;
+  }
+  
+  .nav-item .signup-btn {
+    font-size: 14px;
+    color: black !important;
+    width: 90px;
+    height: 35px;
+    border-radius: 18px;
+    border: none;
+    text-align: center;
+    background-color: White;
+    margin-left: 100px;
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.25);
+  }
+  
+  .nav-item .signup-btn:hover {
+    background-color: black;
+    color: White !important;
+  }
+  
+  
+  .nav-link:hover {
+    color: #9F8069 !important;
+  }
+  
+  nav img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  nav p {
+    margin: 0px;
+    font-size: 24px;
+  }
+  .container-fluid {
+    margin-left: 75px;
+    margin-right: 110px;
+  }
+  
+
+/* Checkout Section */
+.checkout {
+    padding: 80px 0;
+}
+
+/* Checkout Form */
+.checkout .checkout__form {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.checkout__form__top {
+    margin-bottom: 30px;
+}
+
+.checkout__form__top h4 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.checkout__form__top h6 {
+    font-size: 14px;
+}
+
+.input__top {
+    margin-bottom: 20px;
+}
+
+.input__top input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease;
+}
+
+.input__top input:focus {
+    border-color: #9F8069;
+    box-shadow: 0 0 5px rgba(159, 128, 105, 0.6);
+}
+
+.input__top label {
+    display: inline-flex;  
+    align-items: center;   
+    font-size: 14px;        
+    font-weight: normal;
+    white-space: nowrap;
+}
+
+.input__top input[type="checkbox"] {
+    margin-left: 10px;     
+    margin-top: 10px; 
+}
+
+
+.input__top .checkmark {
+    margin-left: 10px;
+}
+
+.input__item {
+    margin-bottom: 20px;
+}
+
+.input__item p {
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.input__item input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease;
+}
+
+.checkout__address {
+    margin-bottom: 30px;
+}
+
+.double__input input {
+    width: 48%;
+    margin-right: 4%;
+}
+
+.double__input input:last-child {
+    margin-right: 0;
+}
+
+/* Add space between address fields */
+.checkout__address .input__item {
+    margin-bottom: 30px; /* More spacing between fields */
+}
+
+/* Checkout Right Section */
+.checkout__proceed {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    animation: slideIn 1s ease-in-out;
+}
+
+.checkout__proceed__title h4 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.checkout__proceed__coupon {
+    margin-bottom: 20px;
+}
+
+.checkout__proceed__coupon p {
+    font-size: 14px;
+}
+
+.checkout__proceed__coupon input {
+    width: 70%;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.checkout__proceed__coupon button {
+    padding: 10px 20px;
+    background-color: #9F8069;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.checkout__proceed__coupon button:hover {
+    background-color: #7e5b43;
+}
+
+.checkout__proceed__product {
+    margin-bottom: 20px;
+}
+
+.checkout__proceed__product h5 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.checkout__proceed__product ul {
+    padding-left: 20px;
+}
+
+.checkout__proceed__product li {
+    padding: 5px 0;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.checkout__proceed__total li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.checkout__proceed__total {
+    margin-bottom: 20px;
+}
+
+.checkout__proceed__widget label {
+    font-size: 14px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.site-btn {
+    padding: 12px 25px;
+    background-color: #9F8069;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.site-btn:hover {
+    background-color: #7e5b43;
+}
+
+.checkout__proceed__widget {
+    margin-bottom: 20px;
+}
+
+/* Add some spacing between form sections */
+.checkout__form .input__item {
+    margin-bottom: 30px;
+}
+
+.row {
+    margin-bottom: 30px;
+}
+
+.checkout__proceed__coupon button {
+    margin-top: 20px;
+}
+
+/* Add some spacing between the form's top section and the rest of the content */
+.checkout__form__top {
+    margin-bottom: 40px;
+}
+
+
+/*================================Footer============================*/
+/*===================================================================*/
+
+.footer {
+    background: #f4f4f4;
+    grid-column: span 12;
+    border-top: 1px solid #ddd;
+    padding: 20px 40px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #000000;
+}
+
+.footer-logo img {
+    height: 80px;
+    width: 80px;
+    margin-bottom: 15px;
+}
+
+.logo-text strong {
+    font-weight: bold;
+}
+
+.footer-links {
+    display: flex;
+    gap: 40px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 8px;
+}
+
+.footer-links ul .active {
+    color: #947253;
+    font-weight: bolder;
+}
+
+.footer-links ul li strong {
+    font-size: 16px;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
+
+.footer-social {
+    text-align: left;
+}
+
+.footer-social span {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons a img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #888;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .checkout .checkout__form, .checkout__proceed {
+        padding: 15px;
+    }
+
+    .checkout__proceed__product ul {
+        padding-left: 0;
+    }
+
+    .checkout__proceed__product li {
+        font-size: 12px;
+    }
+
+    .input__top input,
+    .input__item input {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .checkout__proceed__coupon input {
+        width: 60%;
+    }
+
+    .checkout__proceed__coupon button {
+        padding: 8px 15px;
+    }
+
+    .site-btn {
+        padding: 10px 20px;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}

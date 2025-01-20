@@ -1,0 +1,834 @@
+a {
+  color: white;
+  text-decoration: none;
+}
+
+/*================================Nav Bar=================================*/
+#userprofile{
+  display: flex;
+gap: 30px;
+margin-right: 10px;
+margin-left: 100px;
+margin-top: 13px;
+cursor: pointer;
+transform: scale(1.1);
+}
+#userprofile a {
+  color: black;
+}
+#userprofile a:hover {
+  transform: scale(1.3);
+  color: #9F8069;
+}
+
+.logospan{
+  font-family: "Monotype Corsiva", "Cursive", sans-serif;
+  font-size: 35px;
+  margin-bottom: -10px !important;
+}
+
+nav {
+  grid-column: span 12;
+  grid-row: 1;
+  z-index: 10;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.navbar {
+  background-color: White !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+.nav-link {
+  color: black !important;
+  margin: 0 10px;
+  font-size: 14px;
+}
+
+
+.nav-link.active {
+  font-weight: bold;
+  color: White !important;
+  width: 80px;
+  height: 35px;
+  border-radius: 12px;
+  text-align: center;
+  background-color: #9F8069;
+  box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.25);
+}
+
+#active-nav:hover{
+  color: black !important;
+}
+
+.nav-item .signup-btn {
+  font-size: 14px;
+  color: black !important;
+  width: 90px;
+  height: 35px;
+  border-radius: 18px;
+  border: none;
+  text-align: center;
+  background-color: White;
+  margin-left: 100px;
+  box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.25);
+}
+
+.nav-item .signup-btn:hover {
+  background-color: black;
+  color: White !important;
+}
+
+
+.nav-link:hover {
+  color: #9F8069 !important;
+}
+
+nav img {
+  width: 40px;
+  height: 40px;
+}
+
+nav p {
+  margin: 0px;
+  font-size: 24px;
+}
+.container-fluid {
+  margin-left: 75px;
+  margin-right: 110px;
+}
+
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  grid-column: span 12;
+  grid-row: 2;
+}
+
+
+.size .buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.size .buttons .btn {
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.size .buttons input[type="number"] {
+  padding: 5px;
+  width: 60px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+
+
+.rating:not(:checked) > input {
+    position: absolute;
+    appearance: none;
+  }
+  
+  .rating:not(:checked) > label {
+    float: right;
+    cursor: pointer;
+    font-size: 30px;
+    color: #666;
+  }
+  
+  .rating:not(:checked) > label:before {
+    content: '★';
+  }
+  
+  .rating > input:checked + label:hover,
+  .rating > input:checked + label:hover ~ label,
+  .rating > input:checked ~ label:hover,
+  .rating > input:checked ~ label:hover ~ label,
+  .rating > label:hover ~ input:checked ~ label {
+    color: #e58e09;
+  }
+  
+  .rating:not(:checked) > label:hover,
+  .rating:not(:checked) > label:hover ~ label {
+    color: #ff9e0b;
+  }
+  
+  .rating > input:checked ~ label {
+    color: #ffa723;
+  }
+  
+
+ 
+  .thumbnails img {
+    width: 70px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .details {
+    flex: 2;
+    margin-top: 30px;
+  }
+  .price {
+    font-size: 24px;
+    color: #333;
+  }
+  .buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .buttons button {
+    padding: 10px 20px;
+  }*/
+
+  .product-container {
+    display: flex;
+    gap: 20px;
+    margin: 20px;
+  }
+
+
+  .product-page {
+    padding: 20px;
+    background-color: #f9f9f9;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* شريط البحث */
+  .search-bar {
+    margin-top: 20px;
+    margin-bottom: 70px;
+    display: flex;
+    justify-content: center;
+    gap: 250px;
+  }
+  
+  .group {
+    display: flex;
+    align-items: center;
+    background: #e6e6e6;
+    padding: 10px 15px;
+    border-radius: 8px;
+    width: 50%;
+  }
+  
+  .group .icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+  }
+  
+  .group .input {
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 16px;
+    width: 100%;
+  }
+  
+  /* أيقونات المنتج */
+  .product-icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    font-size: 24px;
+    color: #444;
+  }
+  
+  .product-icons i {
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .product-icons i:hover {
+    color: #9f8069;
+  }
+  
+  /* حاوية المنتج */
+  .product-container {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    padding-left: 50px;
+    padding-right: 30px;
+
+  }
+  
+  /* صورة المنتج */
+  .product-image {
+    flex: 1;
+    margin-top: 30px;
+  }
+  
+  .product-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .thumbnails {
+    display: flex;
+    gap: 30px;
+    margin-top: 10px;
+  }
+  
+  .thumbnails img {
+    width: 60px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: border 0.3s ease;
+  }
+  
+  .thumbnails img:hover {
+    border-color: #9f8069;
+  }
+  
+  /* تفاصيل المنتج */
+  .details {
+    flex: 2;
+    margin-left: 10px;
+    margin-top: 50px;
+  }
+  
+  .details h2 {
+    font-size: 24px;
+    color: #333;
+    margin-top: 5px;
+    margin-bottom: 30px;
+  }
+  
+  .details p {
+    margin-bottom: 8px;
+    color: #666;
+  }
+  
+  .price {
+    font-size: 28px;
+    font-weight: bold;
+    color: #9f8069;
+  }
+  
+  .rating {
+    margin-bottom: 15px;
+  }
+  
+  .rating input[type="radio"] {
+    display: none;
+  }
+  
+  .rating label {
+    font-size: 24px;
+    color: #ffc107;
+  }
+  
+  .rating label::before {
+    content: "★";
+  }
+  
+  .buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .buttons .btn {
+    padding: 10px 15px;
+    border-radius: 5px;
+  }
+  
+  .buttons input[type="number"] {
+    padding: 5px;
+    width: 60px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .qty{margin-top: 40px;}
+
+  .product-container{
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  #addToCartBTN{
+    background-color:#C1AD95 ;
+  }
+  #addToCartBTN:hover{
+    background-color: #9f8069;
+  }
+  #favor:hover{ background-color: #C1AD95 }
+  #favor{border:#9f8069 ;}
+
+  #lastbuttons{margin-top: 50PX;}
+
+
+/*section reviews*/
+
+
+.reviews-section {
+    margin-top: 70px;
+    padding: 50px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  
+  .reviews-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .reviews-header h3 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .write-review-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #9f8069;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .write-review-btn:hover {
+    background-color: #7f684d;
+  }
+  
+  .review {
+    display: flex;
+   flex-direction: column;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .review:last-child {
+    border-bottom: none;
+  }
+  
+  .review-author {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .review-author img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+  }
+  
+  .author-info h4 {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .star-rating {
+    color: #ffc107;
+    font-size: 18px;
+  }
+  
+  .review-text {
+   
+   margin-left: 100px;
+   margin-top: -19px;
+    font-size: 16px;
+    color: #666;
+  }
+  
+
+  /*write a review*/
+
+  body.body-review {
+    background: linear-gradient(to right, #c2a17c, #e0c3a0); /* خلفية متدرجة تشبه الصورة */
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.review-container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* الظل */
+    width: 400px;
+    text-align: center;
+  
+}
+
+h1 {
+    font-size: 28px;
+    color: #5a3724;
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 16px;
+    color: #4f3d2f;
+    display: block;
+    margin-top: 15px;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #d6c1a9;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: none;
+}
+
+button {
+    background-color: #a17f5b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #8c6c4a;
+}
+
+.rating-review {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.rating-review label {
+  margin-top: 5px;
+    font-size: 30px;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.rating-review input {
+    display: none;
+}
+
+.rating-review input:checked ~ label,
+.rating-review label:hover,
+.rating-review label:hover ~ label {
+    color: #d4a760; /* لون النجوم عند التفاعل */
+}
+
+.rating-review label:before {
+    content: "★";
+}
+
+
+
+
+/*================================Footer============================*/
+  /*===================================================================*/
+  
+  .footer {
+    background: #f4f4f4;
+    grid-column: span 12; 
+    border-top: 1px solid #ddd;
+    padding: 20px 40px;
+    text-align: center;
+    grid-row: 2;
+    margin-top: 20px;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #000000;
+  }
+  
+  .footer-logo img {
+    height: 80px;
+    width: 80px;
+    margin-bottom: 15px;
+  }
+  
+  .logo-text strong {
+    font-weight: bold;
+  }
+  
+  .footer-links {
+    display: flex;
+    gap: 40px;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-links ul li {
+    margin-bottom: 8px;
+  }
+  .footer-links ul .active {
+    color: #947253;
+    font-weight:bolder ;
+  }
+  
+  .footer-links ul li strong {
+    font-size: 16px;
+  }
+  
+  .footer-links ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+  }
+  
+  .footer-social {
+    text-align: left;
+  }
+  
+  .footer-social span {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .social-icons a img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .footer-bottom {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #888;
+  }
+/*new comment*/
+  .review-item {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+  }
+  .review-item h4 {
+    margin: 0;
+    font-size: 1.2em;
+  }
+  .review-item p {
+    margin: 5px 0;
+  }
+
+
+  /*add to cart btn*************************/
+#addToCartBTN {
+    position: relative;
+    font-family: myFont;
+    border-radius: 10px;
+    margin-right: 10px;
+    overflow: hidden;
+}
+/*save btn--------------------------*/
+.loader {
+  position: absolute;
+  border: 3px solid rgb(0, 0, 0);
+  border-left-color: transparent;
+  border-radius: 50%;
+  top: 10px;
+  left: 40px;
+  width: 20px;
+  height: 20px;
+  transform: translateY(-30px);
+}
+
+.loader.active {
+  animation: start 0.2s linear forwards, spin 1s 0.4s linear infinite;
+}
+.loader.active.check {
+  animation: end 0.2s linear forwards;
+}
+
+.done {
+  position: absolute;
+  top: 10px;
+  left: 40px;
+  transform: translateY(-40px);
+}
+
+.done.check {
+  animation: start 0.2s linear forwards;
+}
+
+@keyframes end {
+  0% {
+      transform: translateY(0px);
+  }
+  100% {
+      transform: translateY(40px);
+  }
+}
+
+@keyframes start {
+  0% {
+      transform: translateY(-40px);
+  }
+  100% {
+      transform: translateY(0px);
+  }
+}
+
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg) ;
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+  /*=======================media query========================================*/
+  /*==========================================================================*/
+  /* Media query for mobile responsiveness */
+@media only screen and (max-width: 768px) {
+  /* Adjust navbar styles */
+  .navbar-toggler {
+    position: absolute;
+    right: 10px; /* Adjust position */
+    top: 5px;
+    background-color: #9F8069;
+  }
+  .navbar-toggler-icon {
+    background-color:#9F8069;
+  }
+  .navbar-collapse {
+    background-color: white; /* Dropdown menu background */
+    text-align: center;
+    z-index: 1;
+  }
+  .nav-link {
+    color: #10050B !important; /* Update link color for dropdown */
+    display: block; /* Stack links vertically */
+    margin: 10px 0;
+  }
+  /* Adjust user profile section */
+  #userprofile {
+    margin: 10px 0;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Adjust main content */
+  .main-content {
+    padding: 10px;
+    flex-direction: column;
+  }
+  
+
+  .product-container {
+    flex-direction: column;
+    gap: 15px;
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .product-image #main-image{
+    width: 100%;
+  }
+
+  .thumbnails {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  /* Adjust review section */
+  .reviews-section {
+    padding: 20px;
+    margin: 10px;
+  }
+
+  .review {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .review-author img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .review-text {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  /* Adjust footer styles */
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-social {
+    text-align: center;
+  }
+
+  /* Adjust search bar */
+  .search-bar {
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+  }
+
+  .group {
+    width: 90%;
+  }
+
+  /* Adjust buttons */
+  .buttons {
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+  }
+
+
+  /* Adjust review form */
+  .review-container {
+    width: 90%;
+  }
+}

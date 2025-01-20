@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Font-->
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css pages/ProductPage.css">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+  <title>Product Page</title>
+</head>
+
+<body>
+  <!-- Navbar -->
+   <!-- Navbar -->
+   <nav class="navbar navbar-expand-lg border-bottom">
+    <div class="container-fluid">
+      <!-- Logo -->
+      <p class="navbar-brand fw-bold">
+        <img src="../imagesHome/logo.png" alt="logo"> <span class="logospan"> <span style="color:#9F8069;">Golden</span>Touch</span>
+      </p>
+      <!-- Toggler for mobile view -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Navbar Items -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active text-white fw-bold position-relative" id="active-nav" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="../htmlPages/shopPage.html">Shop</a>
+          </li>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="../htmlPages/aboutUsPage.html">Who We Are</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="../htmlPages/contactUsPage.html">Contact Us</a>
+        </li>
+          <li id="userprofile" class="nav-item">
+            <a href="./userPage.html"><i class="fa-solid fa-user"></i></a>
+            <a href="#"><i class="fa-solid fa-heart"></i></a>
+            <a href="cartPage.html"><i class="fa-solid fa-basket-shopping"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav> <!--===========End nav==========-->
+
+  <main class="product-page">
+    <div class="product-container">
+      <div class="product-image">
+        <img id="main-image" src="" alt="Main Product">
+        <div class="thumbnails">
+          <img id="image1" src="" onclick="changeImage(this.src)" alt="Thumbnail 1">
+          <img id="image2" src="" onclick="changeImage(this.src)" alt="Thumbnail 2">
+          <img id="image3" src="" onclick="changeImage(this.src)" alt="Thumbnail 3">
+        </div>
+      </div>
+      <div class="details">
+        <h2 id="product-title">Product Title</h2>
+        <p id="product-sku">SKU: <span id="product-sku-value"></span></p>
+        <div class="rating" id="product-rating"></div>
+        <p class="price" id="product-price">$0.00</p>
+        <hr>
+        <div class="size">
+          <label>Size:</label>
+          <div class="buttons">
+            <button class="btn btn-outline-secondary">S</button>
+            <button class="btn btn-outline-secondary">M</button>
+            <button class="btn btn-outline-secondary">L</button>
+          </div>
+        </div>
+        <div class="qty">
+          <label>Qty:</label>
+          <input type="number" value="1" min="1" style="width: 50px;">
+        </div>
+        <div class="buttons" id="lastbuttons">
+          <button id="addToCartBTN" class="btn">
+            <div class="save-box">
+            <a>Add to cart</a>
+            <div class="loader"></div>
+            <div class="done"><i class='bx bx-check bx-sm'></i></div>
+          </div>
+        </button>
+          <button id="favor" class="btn"><i class="fa-regular fa-heart"></i></button>
+        </div>
+      </div>
+    </div>
+
+ 
+
+    <section class="reviews-section">
+      <div class="reviews-header">
+        <h3>Customers' Reviews</h3>
+        <button class="write-review-btn" id="writeReviewBtn">Write a Review</button>
+      </div>
+
+      <div id="reviews-container">
+        <!-- Reviews will be displayed here -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <p class="navbar-brand fw-bold" id="logo-icon">
+          <img src="../imagesHome/logo.png" alt="logo-icon"> <span class="logospan"> <span style="color:#9F8069;">Golden</span>Touch</span>
+        </p>
+      </div>
+      <div class="footer-links">
+        <ul>
+          <li class="active">Home</li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">Sign Up</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <span>Find Us on</span>
+        <div class="social-icons">
+          <i class='bx bxl-facebook-square bx-sm'></i>
+          <i class='bx bxl-instagram-alt bx-sm'></i>
+          <i class='bx bxl-gmail bx-sm'></i>
+          <i class='bx bxl-whatsapp bx-sm'></i>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Copyright &copy;2020 All rights reserved</p>
+    </div>
+  </footer>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js";
+    import { getFirestore, doc, getDoc, collection, getDocs, addDoc } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-firestore.js";
+    import { getAuth } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-auth.js";
+
+    // Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyCfytV7PtN2LIrv8jBlqsLRGQeGtVe4LqY",
+      authDomain: "golden-f43ab.firebaseapp.com",
+      projectId: "golden-f43ab",
+      storageBucket: "golden-f43ab.appspot.com",
+      messagingSenderId: "314092349099",
+      appId: "1:314092349099:web:9449b624f50ac93c5d39ee",
+      measurementId: "G-PYNZ6QXR40"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+    const auth = getAuth(app);
+
+    // Get Product ID from URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = urlParams.get("id");
+
+    if (!productId) {
+      alert("Product ID is missing in the URL.");
+      window.location.href = "../htmlPages/shopPage.html";
+    }
+
+    // Fetch product details
+    async function fetchProductDetails() {
+      try {
+        const productRef = doc(db, "products", productId);
+        const docSnap = await getDoc(productRef);
+        if (docSnap.exists()) {
+          const productData = docSnap.data();
+          document.getElementById("main-image").src = productData.image;
+          document.getElementById("image1").src = productData.image;
+          document.getElementById("image2").src = productData.image2;
+          document.getElementById("image3").src = productData.image3;
+          document.getElementById("product-title").innerText = productData.name;
+          document.getElementById("product-sku-value").innerText = productData.description;
+          document.getElementById("product-price").innerText = `${productData.price}JD`;
+          displayReviews();
+          attachAddToCartEvent(document.getElementById("addToCartBTN"), productData); // Attach Add to Cart event
+        } else {
+          alert("No product found!");
+          window.location.href = "htmlPages/shop.html";
+        }
+      } catch (error) {
+        console.error("Error fetching product details:", error);
+      }
+    }
+
+    // Add product to the cart
+    async function addToCart(productData, userId) {
+      try {
+        if (!userId) {
+          alert("You need to log in to add products to the cart!");
+          return;
+        }
+
+        // Accessing the "cart" collection in Firestore
+        const cartCollection = collection(db, "cart");
+
+        // Add product to the user's cart based on userId
+        await addDoc(cartCollection, {
+          userId: userId,          // User ID
+          name: productData.name,  // Product Name
+          price: productData.price, // Product Price
+          description: productData.description, // Product Description
+          image: productData.image,  // Product Image
+        });
+
+        console.log("Product added to cart successfully!");
+      } catch (error) {
+        console.error("Error adding product to cart:", error);
+      }
+    }
+
+    // Attach event to "Add to Cart" button
+    function attachAddToCartEvent(button, productData) {
+      button.addEventListener("click", async () => {
+        const user = auth.currentUser; // Get current user
+        if (!user) {
+          alert("You need to log in to add products to the cart!");
+          return;
+        }
+        const userId = user.uid;
+
+        // Call addToCart with product data and userId
+        await addToCart(productData, userId);
+      });
+    }
+
+    // Display reviews
+    async function displayReviews() {
+      try {
+        const reviewsContainer = document.getElementById("reviews-container");
+        const commentsRef = collection(db, "reviews");
+        const querySnapshot = await getDocs(commentsRef);
+
+        reviewsContainer.innerHTML = ""; // Clear existing reviews
+
+        querySnapshot.forEach((doc) => {
+          const commentData = doc.data();
+          if (commentData.productId === productId) {
+            const reviewElement = document.createElement("div");
+            reviewElement.className = "review-item";
+            reviewElement.innerHTML = `
+              <h4>${commentData.name}</h4>
+              <p>${"⭐".repeat(commentData.rating)}</p>
+              <strong>${commentData.reviewBody}</strong>
+              <small>${new Date(commentData.timestamp.seconds * 1000).toLocaleString()}</small>
+            `;
+            reviewsContainer.appendChild(reviewElement);
+          }
+        });
+
+        if (reviewsContainer.innerHTML === "") {
+          reviewsContainer.innerHTML = "<p>No reviews yet for this product.</p>";
+        }
+      } catch (error) {
+        console.error("Error displaying reviews:", error);
+      }
+    }
+
+    // Redirect to write review page
+    document.getElementById("writeReviewBtn").onclick = function () {
+      window.location.href = `../htmlPages/writereview.html?id=${productId}`;
+    };
+
+    // Initialize page
+    window.onload = fetchProductDetails;
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js pages/ProductPage.js"></script>
+</body>
+
+</html>

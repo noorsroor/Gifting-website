@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!--Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
+    <!--Box Icons-->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <!-- My CSS file-->
+    <link rel="stylesheet" href="../css pages/homeUserPage.css">
+</head>
+<body>
+   <!-- Navbar -->
+   <nav class="navbar navbar-expand-lg border-bottom">
+    <div class="container-fluid">
+      <!-- Logo -->
+      <p class="navbar-brand fw-bold">
+        <img src="../imagesHome/logo.png" alt="logo"> <span class="logospan"> <span style="color:#9F8069;">Golden</span>Touch</span>
+      </p>
+      <!-- Toggler for mobile view -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Navbar Items -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active text-white fw-bold position-relative" id="active-nav" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="../htmlPages/shopPage.html">Shop</a>
+          </li>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="../htmlPages/aboutUsPage.html">Who We Are</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="../htmlPages/contactUsPage.html">Contact Us</a>
+        </li>
+          <li id="userprofile" class="nav-item">
+            <a href="./userPage.html"><i class="fa-solid fa-user"></i></a>
+            <a href="#"><i class="fa-solid fa-heart"></i></a>
+            <a href="cartPage.html"><i class="fa-solid fa-basket-shopping"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav> <!--===========End nav==========-->
+
+
+
+<!--page main content-->
+<div class="main-content">
+    <section class="hero"><!-- Hero Section begin -->
+      <div>
+          <div class="txt">
+              <div>Welcome <span id="welcome-message" style="color:#9F8069"></span></div>
+              <div>In The Perfect Place for Gifting Accessories!</div>
+              <div>we believe that every gift tells a story, and we're here to help you create moments of joy and connection</div>
+          </div>
+  
+          <div style="position: relative; width: 100%;">
+            <form id="search-form" class="form">
+              <button>
+                <i class='bx bx-search-alt'></i>
+              </button>
+              <input
+                id="search-input"
+                class="input"
+                placeholder="Type your text"
+                required
+                type="text"
+              />
+            </form>
+            <div id="search-results"></div> <!-- Results container -->
+          </div>
+
+          <div class="btns">
+              <button><a href="../htmlPages/shopPage.html"> Shop Now</a></button>
+          </div>
+      </div>
+      <div class="logo-img"><img src="../imagesHome/hero.png" alt="hero"></div>
+    </section> <!-- Hero Section End -->
+
+
+  <!----------Explore Section--------->
+  <section>
+    <div>Explore Gifts By Category</div>
+    <div class="projects">
+      <div class>
+          <img src="https://i.pinimg.com/736x/bd/fa/84/bdfa849a27618197905b0d1d7a4c855f.jpg" alt="Image 2">
+          <div class="text-overlay">
+              <h3>For Her</h3>
+              <p>Discover thoughtful gifts that add charm, elegance, and a touch of luxury to her world.</p>
+          </div>
+      </div>
+      <div>
+          <img src="https://i.pinimg.com/736x/d1/ef/3e/d1ef3ec4466fb96a26af4afec5bbea30.jpg" alt="Image 5">
+          <div class="text-overlay">
+              <h3>For Him</h3>
+              <p>From modern classics to bold statements, explore gifts that match his unique personality</p>
+          </div>
+      </div>
+      <div>
+          <img src="https://i.pinimg.com/736x/59/96/24/59962425e9b79421e00db4fdd2ec8ab4.jpg" alt="Image 6">
+          <div class="text-overlay">
+              <h3>For Kids</h3>
+              <p>Brighten their day with gifts full of color, creativity, and endless fun.</p>
+
+          </div>
+      </div>
+  </div>
+  </section><!--===========End main==========-->
+
+
+
+  <!---===========================New Section===============================-->
+  <section class="slider-container">
+    <h2>Discover What's New</h2>
+    <div class="slider">
+      <button class="slider-btn prev"><i class='bx bx-chevron-left bx-md'></i></button>
+      <div class="slider-wrapper" id="slider-wrapper">
+
+      </div>
+      <button class="slider-btn next"><i class='bx bx-chevron-right bx-md'></i></button>
+    </div>
+    <div class="dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </section>
+
+
+  <!--=====================Offers========================-->
+  <section class="offers-section">
+    <div class="line"></div>
+    <div class="offer">
+      <div class="img-box"><img src="../imagesHome/1.png" alt=""></div>
+      <div class="img-box"><img src="../imagesHome/2.png" alt=""></div>
+      <div class="img-box"><img src="../imagesHome/3.png" alt=""></div>
+      <div class="img-box"><img src="../imagesHome/4.jpg" alt=""></div>
+    </div>
+    <div class="line"></div>
+  </section>
+
+  <!---===========================New Section===============================-->
+  <section class="slider-container">
+    <h2>Top Rated Gifts</h2>
+    <div class="slider">
+      <button class="slider-btn prev"><i class='bx bx-chevron-left bx-md'></i></button>
+      <div class="slider-wrapper" id="slider-wrapper2">
+        
+      </div>
+      <button class="slider-btn next"><i class='bx bx-chevron-right bx-md'></i></button>
+    </div>
+    <div class="dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </section>
+
+</div><!--end content-->
+
+  <!--===================Footer==========================-->
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Logo and Name -->
+      <div class="footer-logo">
+        <p class="navbar-brand fw-bold" id="logo-icon">
+        <img src="../imagesHome/logo.png" alt="logo-icon"> <span class="logospan"> <span style="color:#9F8069;">Golden</span>Touch</span>
+        </p>
+      </div>
+      
+      <!-- Navigation Links -->
+      <div class="footer-links">
+        <ul>
+          <li class="active">Home</li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">Sign Up</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      
+      <!-- Social Media -->
+      <div class="footer-social">
+        <span>Find Us on</span>
+        <div class="social-icons">
+          <i class='bx bxl-facebook-square bx-sm'></i>
+          <i class='bx bxl-instagram-alt bx-sm' ></i>
+          <i class='bx bxl-gmail bx-sm' ></i>
+          <i class='bx bxl-whatsapp bx-sm' ></i>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Copyright ©2020 All rights reserved</p>
+    </div>
+  </footer>
+  
+
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-analytics.js";
+    import { getAuth,onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
+    import { getFirestore,query,where, collection, addDoc, getDoc,getDocs, doc, deleteDoc, updateDoc } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-firestore.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+  apiKey: "AIzaSyCfytV7PtN2LIrv8jBlqsLRGQeGtVe4LqY",
+  authDomain: "golden-f43ab.firebaseapp.com",
+  projectId: "golden-f43ab",
+  storageBucket: "golden-f43ab.firebasestorage.app",
+  messagingSenderId: "314092349099",
+  appId: "1:314092349099:web:9449b624f50ac93c5d39ee",
+  measurementId: "G-PYNZ6QXR40"
+};
+    /*********************************************************************************************************/
+  
+    // Initialize Firebase
+    // Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const auth =getAuth(app);
+const db = getFirestore(app);
+// Initialize Firebase Authentication
+auth.onAuthStateChanged((user) => {
+  console.log("Auth state changed:", user);
+  if (user) {
+    console.log("User ID:", user.uid);
+    fetchAndDisplayUserName(user.uid);
+    
+  } else {
+    console.log("No user signed in.");
+  }
+});
+
+    // Function to fetch and display the user's name dynamically
+    async function fetchAndDisplayUserName(uid) {
+        try {
+    // Reference the user document in the "users" collection
+    const userDocRef = doc(db, "users", uid);
+
+    // Fetch the document data
+    const userDoc = await getDoc(userDocRef);
+
+    if (userDoc.exists()) {
+      // Retrieve and display the user's first name
+      const userName = userDoc.data().firstName;
+      document.getElementById("welcome-message").textContent = `${userName}!`;
+    } else {
+      console.error("No user data found");
+    }
+  } catch (error) {
+    console.error("Error fetching user data:", error);
+  }
+    }
+
+
+    //create cards and get data from the firestore=======================
+    async function fetchAndRenderProducts() {
+    try {
+      const productsCollection = collection(db, "products");
+      const productsSnapshot = await getDocs(productsCollection);
+
+      const products = productsSnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+
+      const cardsContainer = document.getElementById("slider-wrapper");
+      const cardsContainer2 = document.getElementById("slider-wrapper2");
+
+      // Clear container
+      cardsContainer.innerHTML = "";
+      cardsContainer2.innerHTML = "";
+
+      // Render each product to new slider
+      products.forEach((product) => {
+        const cardElement = renderCard(product,product.id);
+        cardsContainer.appendChild(cardElement);
+      });
+
+      // Render each product to top rated slider
+      products.forEach((product) => {
+        const cardElement = renderCard(product,product.id);
+        cardsContainer2.appendChild(cardElement);
+      });
+
+
+    } catch (error) {
+      console.error("Error fetching products:", error);
+    }
+  }
+
+  //check the user and send data to firebase
+  async function addToCart(productData, userId) {
+  try {
+    if (!userId) {
+      console.error("User not logged in. Cannot add to cart.");
+      return;
+    }
+
+    const cartCollection = collection(db, "cart");
+    await addDoc(cartCollection, {
+      userId: userId,
+      name: productData.name,
+      price: productData.price,
+      description: productData.description,
+      image: productData.image,
+    });
+
+    console.log("Product added to cart successfully!");
+  } catch (error) {
+    console.error("Error adding product to cart:", error);
+  }
+}
+
+function attachAddToCartEvent(button, productData) {
+  button.addEventListener("click", async () => {
+    const user = auth.currentUser; // Get the currently logged-in user
+    if (!user) {
+      alert("You need to log in to add products to the cart!");
+      return;
+    }
+    const userId = user.uid;
+
+    // Call addToCart function with product data and userId
+    await addToCart(productData, userId);
+  });
+}
+
+function attachFavoriteEvent(button) {
+  button.addEventListener("click", () => {
+    const heartIcon = button.querySelector("i");
+    if (heartIcon) {
+      // Toggle between the "empty heart" and "filled heart" icons
+      if (heartIcon.classList.contains("bx-heart")) {
+        heartIcon.classList.remove("bx-heart");
+        heartIcon.classList.add("bxs-heart");
+      } else {
+        heartIcon.classList.remove("bxs-heart");
+        heartIcon.classList.add("bx-heart");
+      }
+    }
+  });
+}
+
+function renderCard(productData, product_ID) {
+  const card = document.createElement("div");
+  card.classList.add("card");
+
+  const imagePlaceholder = document.createElement("div");
+  imagePlaceholder.classList.add("image-placeholder");
+  const img = document.createElement("img");
+  img.src = productData.image;
+  img.alt = productData.name;
+  imagePlaceholder.appendChild(img);
+
+  const cardHead = document.createElement("div");
+  cardHead.classList.add("card-head");
+  const h3 = document.createElement("h3");
+  h3.textContent = productData.name;
+  cardHead.appendChild(h3);
+
+  const starRating = document.createElement("div");
+  starRating.classList.add("star-rating");
+  starRating.textContent = "★★★★☆";
+  cardHead.appendChild(starRating);
+
+  const description = document.createElement("p");
+  description.textContent = productData.description;
+
+  const price = document.createElement("div");
+  price.classList.add("price");
+  price.textContent = `Price: ${productData.price} JD`;
+
+  const cardBtns = document.createElement("div");
+  cardBtns.classList.add("card-btns");
+
+  const addToFav = document.createElement("div");
+  addToFav.classList.add("add-to-fav");
+  const heartIcon = document.createElement("i");
+  heartIcon.classList.add("bx", "bx-heart", "bx-sm");
+  addToFav.appendChild(heartIcon);
+
+  const addToCartBtn = document.createElement("button");
+  addToCartBtn.classList.add("add-to-cart");
+  const addBox = document.createElement("div");
+  addBox.classList.add("add-box");
+  const addText = document.createElement("a");
+  addText.textContent = "Add to Cart";
+  const loader = document.createElement("div");
+  loader.classList.add("loader");
+  const doneIcon = document.createElement("div");
+  doneIcon.classList.add("done");
+  const checkIcon = document.createElement("i");
+  checkIcon.classList.add("bx", "bx-check", "bx-sm");
+  doneIcon.appendChild(checkIcon);
+
+  img.addEventListener("click", () => {
+    window.location.href = `./ProductPage.html?id=${product_ID}`;
+  });
+
+  addBox.appendChild(addText);
+  addBox.appendChild(loader);
+  addBox.appendChild(doneIcon);
+  addToCartBtn.appendChild(addBox);
+
+  attachFavoriteEvent(addToFav);
+  // Attach add-to-cart event
+  attachAddToCartEvent(addToCartBtn, productData);
+
+  cardBtns.appendChild(addToFav);
+  cardBtns.appendChild(addToCartBtn);
+
+  card.appendChild(imagePlaceholder);
+  card.appendChild(cardHead);
+  card.appendChild(description);
+  card.appendChild(price);
+  card.appendChild(cardBtns);
+
+  return card;
+}
+
+
+  // Call the function on page load
+  document.addEventListener("DOMContentLoaded", () => {
+    fetchAndRenderProducts();
+  });
+
+
+
+  //search ==================================================================
+  //================================================================
+  // Firebase setup (initialize Firestore, etc.)
+// Assuming `db` is already initialized for Firestore
+
+const searchForm = document.getElementById("search-form");
+const searchInput = document.getElementById("search-input");
+const searchResults = document.getElementById("search-results");
+
+// Hide search results by default
+searchResults.style.display = "none";
+
+searchForm.addEventListener("submit", async (event) => {
+  event.preventDefault(); // Prevent form submission
+  const queryText = searchInput.value.trim().toLowerCase(); // Get and normalize the search input
+
+  // Hide search results if input is empty
+  if (!queryText) {
+    searchResults.style.display = "none";
+    return;
+  }
+
+  try {
+    // Reference to the products collection
+    const productsCollection = collection(db, "products");
+
+    // Fetch all documents in the collection
+    const querySnapshot = await getDocs(productsCollection);
+
+    // Clear any previous search results
+    searchResults.innerHTML = "";
+
+    // Filter results using regex
+    const regex = new RegExp(queryText, "i"); // Case-insensitive regex for partial match
+    const matchingProducts = [];
+
+    querySnapshot.forEach((doc) => {
+      const productData = doc.data();
+      if (regex.test(productData.name)) {
+        matchingProducts.push({ id: doc.id, ...productData });
+      }
+    });
+
+    if (matchingProducts.length > 0) {
+      // Display the results container
+      searchResults.style.display = "block";
+
+      // Iterate over matching products
+      matchingProducts.forEach((product) => {
+        // Create a clickable search result
+        const resultItem = document.createElement("div");
+        resultItem.classList.add("search-result-item");
+        resultItem.textContent = product.name;
+
+        // Add click event to navigate to the product page
+        resultItem.addEventListener("click", () => {
+          window.location.href = "../htmlPages/shopPage.html";
+        });
+
+        // Append the result to the search results container
+        searchResults.appendChild(resultItem);
+      });
+    } else {
+      // Display "No results found" if no products match
+      searchResults.style.display = "block";
+      searchResults.textContent = "No results found.";
+    }
+  } catch (error) {
+    console.error("Error fetching search results:", error);
+    searchResults.style.display = "block";
+    searchResults.textContent = "An error occurred. Please try again.";
+  }
+});
+
+
+
+
+
+    </script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js pages/homeUserPage.js"></script>
+</body>
+</html>
