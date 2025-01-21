@@ -5,6 +5,14 @@ body {
 }
 
 
+
+
+
+
+
+
+
+
 /*================================Nav Bar=================================*/
 #userprofile{
     display: flex;
@@ -128,6 +136,33 @@ header p {
     margin: 20px 0;
     animation: fadeIn 1.5s ease-in-out;
 }
+
+
+/*hero section*/
+.main-content {
+    display: flex;
+    flex-direction: column;
+    grid-column: span 12;
+    grid-row: 2;
+  }
+  
+  .main-content .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 400px;
+    background-image: linear-gradient(to right, rgba(233, 226, 210, 0.86) 0%, rgba(237, 232, 220, 0.68) 23%, rgba(255, 255, 255, 0) 100%)
+   , url('../imagesHome/hero2.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    font-family: 'Figtree', sans-serif;
+    margin: 0; 
+  }
+  .hero{padding:20px;
+padding-top: 30px;}
+
+.ourteam{margin: 10px 40px;}
 
 
 

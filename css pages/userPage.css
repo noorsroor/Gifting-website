@@ -122,6 +122,22 @@ nav p {
   flex-direction: column;
 }
 
+
+label {
+  text-align: left;
+  margin-left: 10px;
+  font-weight: 600;
+  margin-bottom: -10px;
+  margin-top: 5px;
+}
+
+.profile-container i {
+  position: absolute;
+  top: 7px;
+  right: 2px; 
+  cursor: pointer;
+}
+
 /*================================Footer================================*/
 .footer {
   background: #f4f4f4;

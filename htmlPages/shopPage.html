@@ -45,7 +45,7 @@
         </li>
           <li id="userprofile" class="nav-item">
             <a href="./userPage.html"><i class="fa-solid fa-user"></i></a>
-            <a href="#"><i class="fa-solid fa-heart"></i></a>
+            <!-- <a href="#"><i class="fa-solid fa-heart"></i></a> -->
             <a href="cartPage.html"><i class="fa-solid fa-basket-shopping"></i></a>
           </li>
         </ul>
@@ -266,11 +266,13 @@ function renderCard(productData, product_ID) {
   const cardBtns = document.createElement("div");
   cardBtns.classList.add("card-btns");
 
-  const addToFav = document.createElement("div");
-  addToFav.classList.add("add-to-fav");
-  const heartIcon = document.createElement("i");
-  heartIcon.classList.add("bx", "bx-heart", "bx-sm");
-  addToFav.appendChild(heartIcon);
+  // Replace heart icon with "READ MORE" button
+  const readMoreBtn = document.createElement("button");
+  readMoreBtn.classList.add("read-more-btn");
+  readMoreBtn.textContent = "READ MORE »";
+  readMoreBtn.addEventListener("click", () => {
+    window.location.href = `./ProductPage.html?id=${product_ID}`;
+  });
 
   const addToCartBtn = document.createElement("button");
   addToCartBtn.classList.add("add-to-cart");
@@ -286,7 +288,6 @@ function renderCard(productData, product_ID) {
   checkIcon.classList.add("bx", "bx-check", "bx-sm");
   doneIcon.appendChild(checkIcon);
 
-  // Attach a click event to the whole card to navigate to the product page
   img.addEventListener("click", () => {
     window.location.href = `./ProductPage.html?id=${product_ID}`;
   });
@@ -296,12 +297,9 @@ function renderCard(productData, product_ID) {
   addBox.appendChild(doneIcon);
   addToCartBtn.appendChild(addBox);
 
-
-  attachFavoriteEvent(addToFav);
-  // Attach add-to-cart event
   attachAddToCartEvent(addToCartBtn, productData);
 
-  cardBtns.appendChild(addToFav);
+  cardBtns.appendChild(readMoreBtn); // Append the "READ MORE" button
   cardBtns.appendChild(addToCartBtn);
 
   card.appendChild(imagePlaceholder);

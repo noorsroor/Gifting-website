@@ -516,7 +516,7 @@ section:nth-child(2) {
     margin-top: 5px;
   }
   
-  .slider-container .add-to-cart {
+  .slider-container .add-to-cart ,.read-more-btn{
     font-size: 14px;
     font-weight: bold;
     background: #ffffff;
@@ -528,8 +528,16 @@ section:nth-child(2) {
     position: relative;
     overflow: hidden;
   }
+
+  .slider-container .read-more-btn {
+    font-size: 12px;
+  }
   
   .slider-container .add-to-cart:hover {
+    background: black;
+    color: white;
+  }
+  .slider-container .read-more-btn:hover {
     background: black;
     color: white;
   }

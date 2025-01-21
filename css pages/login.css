@@ -179,6 +179,7 @@ button.btn {
   border: none;
   flex: 1;
   max-width: 200px;
+  margin-left: 100px;
 
 }
 

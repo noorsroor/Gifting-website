@@ -315,7 +315,7 @@ a {
     margin-top: 5px;
   }
   
-  .cards-grid .add-to-cart {
+  .cards-grid .add-to-cart, .read-more-btn {
     font-size: 14px;
     font-weight: bold;
     background: #ffffff;
@@ -332,8 +332,12 @@ a {
     background: black;
     color: white;
   }
+  .cards-grid .read-more-btn:hover {
+    background: black;
+    color: white;
+  }
+  
   .cards-grid .add-to-cart:hover .loader{
-    
     border: 3px solid rgb(255, 255, 255);
     border-left-color: transparent;
   }

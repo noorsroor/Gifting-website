@@ -1,4 +1,3 @@
-
 // Import the functions you need from Firebase SDK
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
 import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
@@ -32,12 +31,31 @@ registrationForm.addEventListener("submit", async (e) => {
     const lastName = document.getElementById("lastName").value.trim();
     const email = document.getElementById("email").value.trim();
     const password = document.getElementById("password").value;
-    const age = document.getElementById("age").value;
-    const categories = document.getElementById("categories").value;
+    const age = document.getElementById("age").value.trim();
+    const categories = document.getElementById("categories").value.trim();
 
-    // Validate inputs
+    // Validate inputs using Regex
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Valid email format
+    const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/; // Minimum 8 characters, at least one letter and one number
+    const ageRegex = /^\d+$/; // Only digits
+
     if (!firstName || !lastName || !email || !password || !age || !categories) {
         alert("Please fill in all the fields.");
+        return;
+    }
+
+    if (!emailRegex.test(email)) {
+        alert("Please enter a valid email address.");
+        return;
+    }
+
+    if (!passwordRegex.test(password)) {
+        alert("Password must be at least 8 characters long and contain at least one letter and one number.");
+        return;
+    }
+
+    if (!ageRegex.test(age) || parseInt(age) < 18) {
+        alert("Please enter a valid age (18 or older).");
         return;
     }
 
@@ -71,9 +89,3 @@ registrationForm.addEventListener("submit", async (e) => {
         }
     }
 });
-
-
-
-
-
-

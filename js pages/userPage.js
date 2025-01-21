@@ -98,3 +98,35 @@ logoutButton.addEventListener('click', () => {
     console.error('Error signing out:', error);
   });
 });
+
+
+/*======================update image=====================*/
+
+document.addEventListener("DOMContentLoaded", () => {
+  const profileImage = document.getElementById("profileImage");
+  const editImageIcon = document.getElementById("editImageIcon");
+  const imageUpload = document.getElementById("imageUpload");
+
+  // Check if elements exist before attaching event listeners
+  if (editImageIcon && imageUpload && profileImage) {
+    // Open the file picker when the edit icon is clicked
+    editImageIcon.addEventListener("click", () => {
+      imageUpload.click();
+    });
+
+    // Replace the profile image with the selected file
+    imageUpload.addEventListener("change", (event) => {
+      const file = event.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          profileImage.src = e.target.result; // Update the profile image source
+        };
+        reader.readAsDataURL(file); // Read the image file as a data URL
+      }
+    });
+  } else {
+    console.error("One or more elements are missing. Check your HTML structure.");
+  }
+});
+
